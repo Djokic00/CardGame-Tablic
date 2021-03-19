@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-
 public class SumValidator {
 
     public boolean isValidSum(int targetSum, HashSet<Card> selectedTableCards) {
@@ -30,7 +29,7 @@ public class SumValidator {
                return 1;
             }
             dp = sumOfSubset(n, targetSum);
-            // Ukoliko je kombiancija netacna da se proba jos jednom samo da se sad A ne racuna kao 11 vec kao 1
+            // Look at A as 1
             if (dp[N][targetSum] == false) {
                if (cntAce > 0 && !flag) {
                    n = new ArrayList<>();
@@ -51,7 +50,6 @@ public class SumValidator {
         }
     }
 
-    // Sluzi za proveru da li je data kombinacija izvodljiva za dati zbir
     static boolean[][] sumOfSubset(List<Integer> masa, int targetSum) {
         int N = masa.size();
         boolean[][] dp = new boolean[N+1][targetSum+1];
@@ -66,7 +64,6 @@ public class SumValidator {
         return dp;
     }
 
-    // Sluzi da vrati elemente koji daju odgovarajuci zbir
     static List<Integer> returnSubset(List<Integer> masa, boolean[][] dp, int n, int m) {
         List<Integer> podskup = new ArrayList<>();
         while (m > 0) {

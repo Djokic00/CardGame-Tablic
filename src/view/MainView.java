@@ -40,7 +40,7 @@ public class MainView extends HBox {
 
     private void initElements() {
         backGroundImage = new Image("slike/green.jpg");
-        playBtn = new Button("Odigraj");
+        playBtn = new Button("Play");
         playBtn.setPrefSize(150, 80);
         playBtn.setFont(Font.font(28));
         pcController = PcController.getInstance();
@@ -56,7 +56,7 @@ public class MainView extends HBox {
 
 
         if (deck.getMyCards().isEmpty() && deck.getPcCards().isEmpty()) {
-            if (deck.getBound() < 37) {
+            if (deck.getBound() == 0) {
                 Main.window.setScene(EndGameView.makeScene());
                 return;
             }

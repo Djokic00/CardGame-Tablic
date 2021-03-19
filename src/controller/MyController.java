@@ -23,8 +23,8 @@ public class MyController implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
         Card selectedCard = mainView.getSelectedCard();
         if (selectedCard == null) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Morate selektovati kartu! \n" +
-                    "Pokusajte ponovo.");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "You must select a card! \n" +
+                    "Try again.");
             alert.show();
             return;
         }
@@ -54,8 +54,8 @@ public class MyController implements EventHandler<ActionEvent> {
             deck.setLastTake(0);
         }
         else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Zbir karata nije dobar! \n" +
-                    "Pokusajte ponovo.");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "The sum of cards is not right! \n" +
+                    "Try again.");
             alert.show();
             return;
         }
@@ -63,8 +63,6 @@ public class MyController implements EventHandler<ActionEvent> {
         if (deck.getTableCards().isEmpty() && deck.getLastTake() == 0) {
             deck.setMyNumOfCards(deck.getMyNumOfCards() + 1);
         }
-
-        System.out.println(deck.getMyScore() + " " + deck.getMyNumOfCards());
 
         mainView.pcTurn();
 

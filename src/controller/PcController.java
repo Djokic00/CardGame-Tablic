@@ -72,8 +72,6 @@ public class PcController {
             deck.setPcNumOfCards(deck.getPcNumOfCards()+1);
         }
 
-        System.out.println(deck.getPcScore() + " " + deck.getPcNumOfCards());
-
         if (deck.getBound() == 0 && deck.getPcCards().size() == 0) calculateLastTake(deck.getLastTake());
     }
 
@@ -106,12 +104,10 @@ public class PcController {
 
     // Calculates the last take and add to the score everythig that is left
      public void calculateLastTake(int last) {
-        System.out.println("Poslednje nosenje");
         int points = 0;
         for (Card tableCard : deck.getTableCards()) {
             points += deck.calculateScore(tableCard);
         }
-        System.out.println("Broj poena sa talona: " + points);
         if (last == 1) {
             deck.setPcNumOfCards(deck.getPcNumOfCards() + deck.getTableCards().size());
             deck.setPcScore(deck.getPcScore() + points);

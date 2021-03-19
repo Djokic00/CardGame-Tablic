@@ -38,7 +38,7 @@ public class EndGameView extends VBox {
         int pcNumOfCards = deck.getPcNumOfCards();
         System.out.println(pcNumOfCards);
 
-        title = new Label("Pobednik :");
+        title = new Label("Winner :");
         title.setTextFill(Color.WHITE);
         title.setFont(Font.font(36));
         winnerName = new Label(winner);
@@ -47,12 +47,12 @@ public class EndGameView extends VBox {
 
         String score = String.valueOf(pcScore);
         String num = String.valueOf(pcNumOfCards);
-        computerScore = new Label( "PC :\nBroj odnetih stihova: " + score + " " + " \nBroj odnetih karata: " + num);
+        computerScore = new Label( "PC :\nNumber of taken points: " + score + " " + " \nNumber of taken cards: " + num);
         computerScore.setTextFill(Color.WHITE);
         computerScore.setFont(Font.font(22));
         String lScore = String.valueOf(myScore);
         String lNum = String.valueOf(myNumOfCards);
-        playerScore = new Label("Player :\nBroj odnetih stihova: " + lScore + " " + " \nBroj odnetih karata: " + lNum);
+        playerScore = new Label("Player :\nNumber of taken points: " + lScore + " " + " \nNumber of taken cards: " + lNum);
         playerScore.setTextFill(Color.WHITE);
         playerScore.setFont(Font.font(22));
     }
