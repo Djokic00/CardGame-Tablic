@@ -54,7 +54,6 @@ public class MainView extends HBox {
         hb1.setSpacing(10);
 
 
-
         if (deck.getMyCards().isEmpty() && deck.getPcCards().isEmpty()) {
             if (deck.getBound() == 0) {
                 Main.window.setScene(EndGameView.makeScene());
