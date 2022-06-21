@@ -1,7 +1,7 @@
 # CardGame-Tablic
 
 ## About
-Made a card game that is played against computer. The project was written in Java and JavaFX was used for the GUI. 
+Made a card game that is played against computer. The project was written in Java and JavaFX was used for the GUI. Later, I had an opportunity to use the project in "Intelligent Systems" course at my university.
 
 ## Rules
 You can find the rules of the game on this link: https://www.pagat.com/fishing/tablic.html
